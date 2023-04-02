@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naba Fitness</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(rgb(0 0 0 / 55%), rgb(0 0 0 / 61%)), url(assets/img/bg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: white;
+        }
+
+        .leftLogoBox {
+            display: inline-block;
+            /* border: 2px solid red; */
+            position: absolute;
+            left: 30px;
+            top: 30px;
+            text-align: center;
+        }
+
+        .midNavBox {
+            width: 45%;
+            margin: 45px auto;
+            /* border: 2px solid greenyellow; */
+        }
+
+        .rightCTABox {
+            display: inline-block;
+            /* border: 2px solid violet; */
+            position: absolute;
+            right: 30px;
+            top: 45px;
+        }
+
+        .navbar {
+            display: inline-block;
+        }
+
+        .navbar li {
+            display: inline-block;
+            padding: 5px 20px;
+            list-style: none;
+        }
+
+        .navbar li a {
+            font-size: 16px;
+            font-weight: bold;
+            letter-spacing: 1px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar li a:hover,
+        .navbar li a.active {
+            color: rgb(255, 105, 50);
+            text-decoration: underline;
+        }
+
+        .leftLogoBox img {
+            width: 50px;
+            filter: invert(100%)
+        }
+
+        .leftLogoBox .siteTitle p {
+            font-size: 18px;
+            line-height: 30px;
+        }
+
+        .btn {
+            background-color: transparent;
+            color: rgb(255, 105, 50);
+            border: 2px solid rgb(255, 105, 50);
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0px 20px;
+            padding: 5px 18px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: rgb(255, 105, 50);
+            color: black;
+        }
+
+        .container {
+            width: 650px;
+            margin: 80px 180px;
+            padding: 40px 50px;
+            /* border: 2px solid white; */
+        }
+
+        .form-group input {
+            display: block;
+            font-size: 16px;
+            letter-spacing: 1px;
+            background-color: rgb(255 105 50 / 24%);
+            color: white;
+            width: 550px;
+            padding: 10px 20px;
+            margin: 16px auto;
+            border: 2px solid rgb(255, 105, 50);
+        }
+
+        .form-group button {
+            font-size: 16px;
+            letter-spacing: 1px;
+            background-color: rgb(255, 105, 50);
+            color: black;
+            width: 100%;
+            margin: 15px auto;
+        }
+
+        .form-group button:hover {
+            background-color: rgb(237 102 53);
+            color: white;
+        }
+
+        .form-group input::placeholder {
+            color: white;
+        }
+
+        .form-group input:focus {
+            background-color: rgb(126 119 119 / 21%);
+            border: 2px solid white;
+        }
+
+        .form-group input:focus-visible {
+            outline: 0px;
+            outline-offset: 1px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <!-- Left box for site logo -->
+        <div class="leftLogoBox">
+            <img src="assets/img/logo.svg" alt="Naba Fitness Logo">
+            <div class="siteTitle">
+                <p>Naba Fitness</p>
+            </div>
+        </div>
+        <!-- Mid box for the navbar -->
+        <div class="midNavBox">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Fitness Classes</a></li>
+                <li><a href="#">Gym Locations</a></li>
+            </ul>
+        </div>
+        <!-- Right box for CTA buttons -->
+        <div class="rightCTABox">
+            <button class="btn">Contact Us</button>
+            <button class="btn">Book Now</button>
+        </div>
+    </header>
+    <!-- our registration form -->
+    <div class="container">
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="Your Name Here">
+            </div>
+            <div class="form-group">
+                <input type="text" name="email" placeholder="Your Email Here">
+            </div>
+            <div class="form-group">
+                <input type="tel" name="number" placeholder="Your Phone Number Here">
+            </div>
+            <div class="form-group">
+                <input type="number" name="number" placeholder="Your Age Here">
+            </div>
+            <div class="form-group">
+                <input type="text" name="locality" placeholder="Your Locality Here">
+            </div>
+            <div class="form-group">
+                <button class="btn">Submit Now</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
